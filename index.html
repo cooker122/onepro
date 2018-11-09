@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./lib/zepto/zepto.js">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./lib/fontawesome/css/font-awesome.css">
+
+
+
+</head>
+
+<body>
+    <!-- 搜素框 -->
+    <header class="pyg_header">
+        <div class="mui-input-row mui-search">
+            <input type="search" class="mui-input-clear" placeholder="">
+        </div>
+    </header>
+    <div class="pyg-content">
+
+        <!-- 轮播图 -->
+        <div class="pyg-gallery">
+            <div class="mui-slider">
+                <!--  <div class="mui-slider-group mui-slider-loop">
+                     支持循环，需要重复图片节点 -->
+                <!-- <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#"><img src="" /></a>
+                    </div>
+                    <div class="mui-slider-item">
+                        <a href="#"><img src="1.jpg" /></a>
+                    </div>
+                    <div class="mui-slider-item">
+                        <a href="#"><img src="2.jpg" /></a>
+                    </div>
+                    <div class="mui-slider-item">
+                        <a href="#"><img src="3.jpg" /></a>
+                    </div>
+                    <div class="mui-slider-item">
+                        <a href="#"><img src="4.jpg" /></a>
+                    </div> -->
+                <!--支持循环，需要重复图片节点-->
+                <!-- <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#"><img src="1.jpg" /></a>
+                    </div>  
+            </div>
+            <div class="mui-slider-indicator">
+                    <div class="mui-indicator mui-active"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                </div>-->
+            </div>
+        </div>
+        <!-- 导航栏 -->
+        <div class="pyg-nav">
+            <ul class="pyg-nav-box">
+            </ul>
+        </div>
+
+
+
+        <!-- 内容 -->
+
+
+        <div class="pyg-list">
+            <div><img src="http://image4.suning.cn/uimg/cms/img/149559219946350066.png" alt=""></div>
+            <div class="">
+                <ul class="goods">
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <footer>
+        <a href="./index.html">
+            <span class="fa fa-home"></span>
+            <div>首页</div>
+        </a>
+        <a href="./pages/category.html">
+            <span class="fa fa-list-ul"></span>
+            <div>分类</div>
+        </a>
+        <a href="">
+            <span class="fa fa-shopping-cart"></span>
+            <div>购物车</div>
+        </a>
+        <a href="">
+            <span class="fa fa-user-circle-o"></span>
+            <div>我的</div>
+        </a>
+
+    </footer>
+
+
+
+
+
+
+</body>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/zepto/zepto.js"></script>
+<script src="./lib/arttemplate/template-web.js"></script>
+<script src="./js/commer.js"></script>
+<script src="./js/index.js"></script>
+<script type="text/template" id="galleryTlp">
+
+    <div class="mui-slider-group mui-slider-loop">
+        <!--支持循环，需要重复图片节点-->
+
+        <div class="mui-slider-item mui-slider-item-duplicate">
+            <a href="#"><img src="{{data[data.length-1].image_src}}" /></a>
+        </div>
+        {{each data val}}
+        <div class="mui-slider-item">
+            <a href="#"><img src="{{val.image_src}}" /></a>
+        </div>
+        {{/each}}
+        <!--支持循环，需要重复图片节点-->
+        <div class="mui-slider-item mui-slider-item-duplicate">
+            <a href="#"><img src="{{data[0].image_src}}" /></a>
+        </div>
+
+    </div>
+
+    <div class="mui-slider-indicator">
+        {{each data val index}} {{if index==0}}
+        <div class="mui-indicator mui-active"></div>
+        {{/if}} {{if index!=0}}
+        <div class="mui-indicator"></div>
+        {{/if}} {{/each}}
+    </div>
+</script>
+<script type="text/template" id="pygnavTlp">
+    {{each data val}}
+    <li>
+        <a href="{{val.navigator_url}}">
+            <img src="{{val.image_src}}" alt="">
+
+        </a>
+    </li>
+    {{/each}}
+
+</script>
+<script type="text/template" id="goodsTlp">
+    {{each data val index}}
+    <div><img src="{{val.group_img}}" alt=""></div>
+    <div class="good">
+        <ul class="goods">
+            {{each val.goods val2 index2}}
+            <li class="list-goods">
+                <img src="{{val2.goods_small_logo}}" alt="">
+                <div class="goods-name">{{val2.goods_name}}</div>
+                <div class="goods-price">￥{{val2.goods_price}}</div>
+
+                <div class="goods-like mui-btn mui-btn-primary mui-btn-outlined">找相似</div>
+            </li>
+            {{/each}}
+        </ul>
+
+        {{/each}}
+</script>
+
+</html>

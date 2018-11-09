@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/category.css">
+</head>
+
+<body>
+    <!-- 搜素框 -->
+    <header class="pyg_header">
+        <div class="mui-input-row mui-search">
+            <input type="search" class="mui-input-clear" placeholder="">
+        </div>
+    </header>
+    <div class="page-box">
+        <div class="page-left">
+            <ul>
+                <!-- <li class="avact">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li> -->
+            </ul>
+        </div>
+
+        <div class="page-right">
+            <div class="page-right-box">
+                <div>
+                    <div class="page-title">电视</div>
+                    <div class="page-content">
+                        <ul>
+                            <li>
+                                <img src="http://api.pyg.ak48.xyz/full/2fb113b32f7a2b161f5ee4096c319afedc3fd5a1.jpg" alt="">
+                                <div>曲面电视</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <footer>
+        <a href="../index.html">
+            <span class="fa fa-home"></span>
+            <div>首页</div>
+        </a>
+        <a href="./category.html">
+            <span class="fa fa-list-ul"></span>
+            <div>分类</div>
+        </a>
+        <a href="">
+            <span class="fa fa-shopping-cart"></span>
+            <div>购物车</div>
+        </a>
+        <a href="">
+            <span class="fa fa-user-circle-o"></span>
+            <div>我的</div>
+        </a>
+
+    </footer>
+</body>
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<SCript src="../lib/iscroll/iscroll.js"></SCript>
+<script src="../js/commer.js"></script>
+<script src="../js/category.js"></script>
+
+</html>
+<!-- 模板 -->
+<script type="text/template" id="pageLeftTlp">
+    {{each data val key}} {{if key==0}}
+    <li class='avact'>{{val.cat_name}}</li>
+    {{/if}} {{if key!=0}}
+    <li>{{val.cat_name}}</li>
+    {{/if}} {{/each}}
+</script>
+<script type="text/template" id="pageRightTlp">
+    {{each data val key}}
+    <div>
+        <div class="page-title">{{val.cat_name}}</div>
+        <div class="page-content">
+            <ul>
+                {{each val.children val2 key2}}
+                <li>
+                    <a href="./goods-list.html?cid={{val2.cat_id}}"> <img src="{{$imports.imgUrl}}{{val2.cat_icon}}" alt="">
+                        <div>{{val2.cat_name}}</div>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    {{/each}}
+</script>

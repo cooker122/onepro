@@ -1,0 +1,143 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  padding: 45px 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  display: block;
+}
+
+.pyg_header {
+  background-color: #f7f7f7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 45px;
+  width: 100%;
+  padding: 5px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 45px;
+}
+
+footer a {
+  color: #000;
+  text-align: center;
+  padding: 5px 0;
+}
+
+footer a div {
+  font-size: 12px;
+}
+
+.loadding::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: .5;
+  content: "";
+  z-index: 100;
+}
+
+.loadding::after {
+  font: normal normal normal 14px/1 FontAwesome;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  margin-left: -50px;
+  font-size: 100px;
+  color: #0094ff;
+  content: "\f110";
+  z-index: 101;
+  -webkit-animation: fa-spin 1s infinite linear;
+          animation: fa-spin 1s infinite linear;
+}
+
+.pyg-content {
+  height: 100%;
+  overflow: scroll;
+}
+
+.pyg-nav {
+  background-color: #ccc;
+}
+
+.pyg-nav .pyg-nav-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pyg-nav .pyg-nav-box li {
+  padding: 10px;
+}
+
+.pyg-nav .pyg-nav-box li a img {
+  width: 90%;
+}
+
+.pyg-list .goods {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 5px;
+}
+
+.pyg-list .goods .list-goods {
+  width: 49%;
+  padding-top: 5px;
+}
+
+.pyg-list .goods .list-goods .goods-name {
+  font-size: 14px;
+  color: #000;
+  height: 40px;
+  overflow: hidden;
+}
+
+.pyg-list .goods .list-goods .goods-price {
+  color: red;
+  font-size: 15px;
+}
+
+.pyg-list .goods .list-goods .goods-like {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=index.css.map */

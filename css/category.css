@@ -1,0 +1,149 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  padding: 45px 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  display: block;
+}
+
+.pyg_header {
+  background-color: #f7f7f7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 45px;
+  width: 100%;
+  padding: 5px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 45px;
+}
+
+footer a {
+  color: #000;
+  text-align: center;
+  padding: 5px 0;
+}
+
+footer a div {
+  font-size: 12px;
+}
+
+.loadding::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: .5;
+  content: "";
+  z-index: 100;
+}
+
+.loadding::after {
+  font: normal normal normal 14px/1 FontAwesome;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  margin-left: -50px;
+  font-size: 100px;
+  color: #0094ff;
+  content: "\f110";
+  z-index: 101;
+  -webkit-animation: fa-spin 1s infinite linear;
+          animation: fa-spin 1s infinite linear;
+}
+
+.page-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.page-box .page-left {
+  background-color: #ccc;
+  overflow: scroll;
+  width: .8rem;
+}
+
+.page-box .page-left ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.page-box .page-left ul li {
+  text-align: center;
+  padding: .05rem 0;
+  font-size: .08rem;
+}
+
+.page-box .page-left ul .avact {
+  border-left: 3px solid blue;
+  background-color: #fff;
+}
+
+.page-box .page-right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.page-box .page-right .page-title {
+  color: blue;
+  padding: .1rem;
+  font-size: .15rem;
+}
+
+.page-box .page-right .page-content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  padding: 0 .05rem;
+}
+
+.page-box .page-right .page-content ul li {
+  width: 32%;
+  text-align: center;
+}
+
+.page-box .page-right .page-content ul li img {
+  width: 80%;
+}
+
+.page-box .page-right .page-content ul li div {
+  font-size: .06rem;
+}
+/*# sourceMappingURL=category.css.map */

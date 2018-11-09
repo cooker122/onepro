@@ -1,0 +1,29 @@
+@import '_commer.scss';
+.dateil-title {
+    font-size: 20px;
+    color: black;
+    padding: 10px 0;
+    height: 53px;
+}
+
+.dateil-price {
+    font-size: 30px;
+    color: orange;
+    padding: 10px;
+}
+
+.box {
+    padding: 0 10px;
+    div {
+        border-bottom: 1px solid #ccc;
+        padding: 10px;
+        .left {
+            color: #ccc;
+            font-size: 12px;
+        }
+        .right {
+            padding-left: 50px;
+            font-size: 14px;
+        }
+    }
+}

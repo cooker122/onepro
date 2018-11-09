@@ -1,0 +1,56 @@
+@import '_commer.scss';
+.page-box {
+    display: flex;
+    height: 100%;
+    .page-left {
+        background-color: #ccc;
+        overflow: scroll;
+        width: .8rem;
+        ul {
+            // width: 100%;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+                text-align: center;
+                // background-color: #ccc;
+                padding: .05rem 0;
+                font-size: .08rem;
+            }
+            .avact {
+                border-left: 3px solid blue;
+                background-color: #fff;
+                // margin: .1rem;
+            }
+        }
+    }
+    .page-right {
+        flex: 1;
+        overflow: hidden;
+        background-color: #fff;
+        .page-title {
+            color: blue;
+            padding: .1rem;
+            font-size: .15rem;
+        }
+        .page-content {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                // justify-content: space-around;
+                margin: 0;
+                padding: 0 .05rem;
+                li {
+                    width: 32%;
+                    text-align: center;
+                    img {
+                        width: 80%;
+                    }
+                    div {
+                        font-size: .06rem;
+                    }
+                }
+            }
+        }
+    }
+}
