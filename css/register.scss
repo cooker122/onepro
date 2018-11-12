@@ -1,0 +1,48 @@
+@import "_commer.scss";
+.login {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px;
+    padding: 5px;
+    span {
+        color: #999;
+    }
+}
+
+.big-box {
+    padding: 5px;
+    .content-box {
+        // display: block;
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
+        img {
+            width: 40%;
+            margin: 0 auto;
+        }
+    }
+    .form {
+        div {
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+            padding: 2px 5px;
+            position: relative;
+            .huoqu {
+                position: absolute;
+                right: 0;
+                bottom: 7px;
+                width: 25%;
+            }
+            &:last-child {
+                border-bottom: 0;
+            }
+            input {
+                padding: 5px;
+            }
+        }
+    }
+    .mui-btn-primary {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+    }
+}

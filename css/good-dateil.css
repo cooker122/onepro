@@ -80,10 +80,14 @@ footer a div {
           animation: fa-spin 1s infinite linear;
 }
 
+.big-box {
+  overflow: hidden;
+}
+
 .dateil-title {
   font-size: 20px;
   color: black;
-  padding: 10px 0;
+  padding: 10px;
   height: 53px;
 }
 
@@ -103,12 +107,110 @@ footer a div {
 }
 
 .box div .left {
-  color: #ccc;
+  color: #999;
   font-size: 12px;
 }
 
 .box div .right {
   padding-left: 50px;
   font-size: 14px;
+}
+
+.mui-table-view {
+  margin: 0 13px;
+}
+
+.mui-table-view li {
+  background-color: #efeff4;
+}
+
+.mui-table-view li .goods-title {
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.mui-table-view li .goods-concent {
+  padding-top: 15px;
+}
+
+.mui-table-view li .goods-concent .goods-designation {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.mui-table-view li .goods-concent .goods-parameter {
+  padding-left: 40px;
+  color: #666;
+  font-size: 14px;
+}
+
+.dateil_foot {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  font-size: 12px;
+  height: 50px;
+  text-align: center;
+}
+
+.dateil_foot .chat {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.dateil_foot .chat span {
+  width: 25%;
+  width: 100%;
+  color: #666;
+}
+
+.dateil_foot .chat span:nth-child(2) {
+  font-size: 15px;
+}
+
+.dateil_foot .cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 25%;
+  border-left: 1px solid #ccc;
+}
+
+.dateil_foot .cart span {
+  width: 100%;
+  color: #666;
+}
+
+.dateil_foot .cart span:nth-child(2) {
+  font-size: 15px;
+}
+
+.dateil_foot .buy {
+  width: 25%;
+  font-size: 16px;
+  color: #fff;
+  line-height: 50px;
+  background-color: #ffaa00;
+  border-left: 1px solid #ccc;
+}
+
+.dateil_foot .add {
+  font-size: 16px;
+  color: #fff;
+  line-height: 50px;
+  width: 25%;
+  background-color: #ff6600;
+  border-left: 1px solid #ccc;
 }
 /*# sourceMappingURL=good-dateil.css.map */

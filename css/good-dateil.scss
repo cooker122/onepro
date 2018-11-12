@@ -1,8 +1,13 @@
 @import '_commer.scss';
+.big-box {
+    // width: 100%;
+    overflow: hidden;
+}
+
 .dateil-title {
     font-size: 20px;
     color: black;
-    padding: 10px 0;
+    padding: 10px;
     height: 53px;
 }
 
@@ -18,12 +23,104 @@
         border-bottom: 1px solid #ccc;
         padding: 10px;
         .left {
-            color: #ccc;
+            color: #999;
             font-size: 12px;
         }
         .right {
             padding-left: 50px;
             font-size: 14px;
         }
+    }
+}
+
+// 规格参数
+.mui-table-view {
+    margin: 0 13px;
+    li {
+        background-color: #efeff4;
+        .goods-title {
+            padding: 5px 0;
+            border-bottom: 1px solid #ccc;
+            // background-color: #6d6d72;
+        }
+        .goods-concent {
+            // background-color: #6d6d72;
+            padding-top: 15px;
+            .goods-designation {
+                // padding: 5px 0;
+                font-size: 16px;
+                color: #ccc;
+            }
+            .goods-parameter {
+                padding-left: 40px;
+                color: #666;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.dateil_foot {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    // justify-content: space-around;
+    background-color: #fff;
+    font-size: 12px;
+    // padding: 10px;
+    height: 50px;
+    text-align: center;
+    // justify-items: center;
+    .chat {
+        width: 25%;
+        display: flex;
+        flex-wrap: wrap;
+        // background-color: pink;
+        // border-left: 1px solid #ccc;
+        span {
+            width: 25%;
+            width: 100%;
+            // flex: 1; 
+            color: #666;
+            // padding: 5px;
+            &:nth-child(2) {
+                font-size: 15px;
+            }
+        }
+    }
+    .cart {
+        // background-color: red;
+        display: flex;
+        flex-wrap: wrap;
+        width: 25%;
+        border-left: 1px solid #ccc;
+        span {
+            width: 100%;
+            color: #666;
+            // flex: 1;
+            // padding: 5px;
+            &:nth-child(2) {
+                font-size: 15px;
+            }
+        }
+    }
+    .buy {
+        width: 25%;
+        // width: 100%;
+        font-size: 16px;
+        color: #fff;
+        line-height: 50px;
+        background-color: rgb(255, 170, 0);
+        border-left: 1px solid #ccc;
+    }
+    .add {
+        font-size: 16px;
+        color: #fff;
+        line-height: 50px;
+        width: 25%;
+        background-color: rgb(255, 102, 0);
+        border-left: 1px solid #ccc;
     }
 }

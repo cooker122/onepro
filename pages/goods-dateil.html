@@ -17,14 +17,14 @@
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
         <h1 class="mui-title">商品详情</h1>
     </header>
-
+    <div class="big-box"></div>
     <!-- 轮播图 -->
-    <div class="pyg-gallery">
+    <!-- <div class="pyg-gallery">
         <div class="mui-slider">
         </div>
-    </div>
+    </div> -->
     <!-- 文字描述 -->
-    <div class="dateil-title mui-ellipsis-2">卡奇莱德(katald)车载空气净化器除甲醛汽车内用负离子氧吧PM2.5除味器消除异味过滤灰尘灰色</div>
+    <!-- <div class="dateil-title mui-ellipsis-2">卡奇莱德(katald)车载空气净化器除甲醛汽车内用负离子氧吧PM2.5除味器消除异味过滤灰尘灰色</div>
     <div class="dateil-price">￥2700</div>
     <div class="box">
         <div>
@@ -32,17 +32,62 @@
             <span class="right">白色</span>
         </div>
         <div>
-            <span>促销</span>
-            <span>是</span>
+            <span class="left">促销</span>
+            <span class="right">是</span>
         </div>
         <div>
-            <span>送至</span>
-            <span>上海市</span>
+            <span class="left">送至</span>
+            <span class="right">上海市</span>
         </div>
         <div>
-            <span>运费</span>
-            <span>免运费</span>
+            <span class="left">运费</span>
+            <span class="right">免运费</span>
         </div>
+    </div> -->
+
+    <!-- teb栏 -->
+    <!-- <div style="padding: 10px 10px;">
+        <div id="segmentedControl" class="mui-segmented-control">
+            <a class="mui-control-item mui-active" href="#item1">
+       图文详情
+    </a>
+            <a class="mui-control-item" href="#item2">
+       规格参数
+    </a>
+
+        </div>
+    </div> -->
+    <!-- teb 栏下面的内容 -->
+    <!-- <div>
+        <div id="item1" class="mui-control-content mui-active">
+
+        </div>
+        <div id="item2" class="mui-control-content">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">
+                    第二个选项卡子项-1
+                </li>
+            </ul>
+        </div>
+    </div> -->
+    <div class="dateil_foot">
+        <a href="" class="chat">
+            <span class="mui-icon mui-icon-chatbubble"></span>
+            <span>客服</span>
+        </a>
+        <a href="" class="cart">
+            <span class="mui-icon mui-icon-download"></span>
+            <span>客服</span>
+        </a>
+        <a href="" class="buy">
+            立即购买
+        </a>
+        <a href="#" class="add">
+           加入购物车
+        </a>
+
+
+
     </div>
 </body>
 
@@ -57,29 +102,87 @@
 
 <script type="text/template" id="galleryTlp">
 
-    <div class="mui-slider-group mui-slider-loop">
-        <!--支持循环，需要重复图片节点-->
 
-        <div class="mui-slider-item mui-slider-item-duplicate">
-            <a href="#"><img src="{{data[data.length-1].pics_sma_url}}" /></a>
-        </div>
-        {{each data val}}
-        <div class="mui-slider-item">
-            <a href="#"><img src="{{val.pics_sma_url}}" /></a>
-        </div>
-        {{/each}}
-        <!--支持循环，需要重复图片节点-->
-        <div class="mui-slider-item mui-slider-item-duplicate">
-            <a href="#"><img src="{{data[0].pics_sma_url}}" /></a>
+    <div class="mui-slider">
+        <div class="mui-slider-group mui-slider-loop">
+            <!--支持循环，需要重复图片节点-->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#"><img src="{{data.pics[data.pics.length-1].pics_mid}}" /></a>
+            </div>
+            {{each data.pics val }}
+            <div class="mui-slider-item">
+
+                <a href="#"><img src="{{val.pics_sma_url}}" /></a>
+
+            </div>
+            {{/each}}
+            <!--支持循环，需要重复图片节点-->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#"><img src="{{data.pics[0].pics_mid}}" /></a>
+            </div>
         </div>
 
+        <div class="mui-slider-indicator">
+            {{each data.pics val index}} {{if index==0}}
+            <div class="mui-indicator mui-active"></div>
+            {{/if}} {{if index!=0}}
+            <div class="mui-indicator"></div>
+            {{/if}} {{/each}}
+        </div>
     </div>
 
-    <div class="mui-slider-indicator">
-        {{each data val index}} {{if index==0}}
-        <div class="mui-indicator mui-active"></div>
-        {{/if}} {{if index!=0}}
-        <div class="mui-indicator"></div>
-        {{/if}} {{/each}}
+
+    <div class="dateil-title mui-ellipsis-2">{{data.goods_name}}</div>
+    <div class="dateil-price">￥{{data.goods_price}}</div>
+    <div class="box">
+        <div>
+            <span class="left">已选</span>
+            <span class="right">白色</span>
+        </div>
+        <div>
+            <span class="left">促销</span>
+            <span class="right">是</span>
+        </div>
+        <div>
+            <span class="left">送至</span>
+            <span class="right">上海市</span>
+        </div>
+        <div>
+            <span class="left">运费</span>
+            <span class="right">免运费</span>
+        </div>
     </div>
+
+    <!-- teb栏 -->
+    <div style="padding: 10px 10px;">
+        <div id="segmentedControl" class="mui-segmented-control">
+            <a class="mui-control-item mui-active" href="#item1">
+       图文详情
+    </a>
+            <a class="mui-control-item" href="#item2">
+       规格参数
+    </a>
+
+        </div>
+    </div>
+    <!-- teb 栏下面的内容 -->
+    <div>
+        <div id="item1" class="mui-control-content mui-active">
+            {{@data.goods_introduce}}
+        </div>
+        <div id="item2" class="mui-control-content">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">
+                    {{each data.attrs val }}
+                    <div class="goods-title">{{val.attr_name.split("-")[0]}}</div>
+                    <div class="goods-concent">
+                        <span class="goods-designation">{{val.attr_name.split("-")[1]}}</span>
+                        <span class="goods-parameter">{{val.attr_vals}}</span>
+                    </div>
+                    {{/each}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
 </script>

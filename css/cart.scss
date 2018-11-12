@@ -1,0 +1,149 @@
+@import "_commer.scss";
+.big-box {
+    height: 100%;
+    overflow: hidden;
+    padding: 20px 10px;
+    .address {
+        padding-top: 20px;
+        padding-bottom: 5px;
+        font-size: 16px;
+        color: #333;
+    }
+    .address-box {
+        position: relative;
+        background-color: #fff;
+        padding: 10px;
+        .mui-media-object {
+            width: 40px;
+            color: #ccc;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .site-box {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1;
+            .default_address {
+                font-size: 16px;
+                width: 100%;
+                color: #333;
+            }
+            .site {
+                font-size: 14px;
+                color: #ccc;
+            }
+        }
+        .mui-media {
+            width: 10px;
+            position: absolute;
+            // height: 100%;
+            right: 25px;
+            // color: red;
+            top: 25px;
+            // z-index: 22;
+            height: 10px;
+            border-top: 1px solid #666;
+            border-right: 1px solid #666;
+            transform: rotatez(45deg);
+            // color: #ccc;
+        }
+    }
+    // 价格
+    .price-box {
+        width: 100%;
+        font-size: 16px;
+        color: #333;
+        padding: 20px;
+        position: relative;
+        background-color: #fff;
+        .totle-price {}
+        .price {}
+        .order {
+            color: #333;
+            padding-right: 30px;
+        }
+        .mui-media {
+            width: 10px;
+            position: absolute;
+            // height: 100%;
+            right: 25px;
+            // color: red;
+            top: 25px;
+            // z-index: 22;
+            height: 10px;
+            border-top: 1px solid #666;
+            border-right: 1px solid #666;
+            transform: rotatez(45deg);
+        }
+    }
+    .Order_details {
+        ul {
+            @include ulstyle;
+            li {
+                display: flex;
+                background: #fff;
+                .mui-input-row{
+                    flex: 1; 
+                    // margin: auto 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                        
+                      
+                    input{
+                      position: static;
+                        // display: block;
+                    }
+                }
+                .img{
+                    flex: 2;
+                    padding: 10px 0;
+                    img{
+                        width: 80%;
+                        margin: 0 auto;
+                    }
+
+                }
+                .order_right{
+                    flex: 4;
+                    padding: 8px;
+                    font-size: 14px;
+                    display: flex;
+                    flex-wrap: wrap;
+                  .mui-ellipsis-2{
+                      color:#ccc;
+                      width: 100%
+                    }
+                  .bottom-box{
+                     display: flex;
+                    span{color: #333;
+                        padding: 20px;
+                        flex: 1;
+                    }
+                    .numbox{
+                        padding: 15px;
+                        flex: 1;
+                    }
+                  }
+                }  
+            }
+        }
+    }
+  
+   
+}
+#big-box{
+    #del_btn,.mui-checkbox,.mui-numbox{
+        display: none;
+    }
+}
+
+#big-box.active{
+    #del_btn ,.mui-numbox{
+        display: block;
+    }
+    .mui-checkbox{
+        display: flex;
+    }
+}
